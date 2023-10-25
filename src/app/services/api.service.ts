@@ -10,10 +10,10 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post<any>(`http://localhost:3000/login`, { email, password });
+    return this.http.post<any>(`https://swt-backend-5ab3517bf547.herokuapp.com/login`, { email, password });
   }
 
   signup(user: any): Observable<any> {
-    return this.http.post<any>(`http://localhost:3000/signup`, user);
+    return this.http.post<any>(`https://swt-backend-5ab3517bf547.herokuapp.com/signup`, user);
   }
 }
