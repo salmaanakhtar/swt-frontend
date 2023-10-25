@@ -13,12 +13,14 @@ import {FormsModule} from "@angular/forms";
 import { HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from "@angular/material/button";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
