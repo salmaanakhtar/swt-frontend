@@ -1,0 +1,39 @@
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto; /* Center the box horizontally */
+}
+
+form {
+  width: 100%; /* Make the form take the full width of the parent container */
+  max-width: 300px; /* Optional: Set a maximum width for the form */
+}
+
+.form-field {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  margin-left: 15px;
+  }
+
+.headertext {
+  font-family: "Agency FB";
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 120px;
+}
+
+button{
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  background-color: darkslategrey;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
