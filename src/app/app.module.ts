@@ -12,7 +12,7 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import { HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from "@angular/material/button";
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import {MatButtonModule} from "@angular/material/button";
     FormsModule,
     HttpClientModule,
     MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

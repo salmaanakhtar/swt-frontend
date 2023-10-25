@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +15,7 @@ export class SignupComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router, private snackBar: MatSnackBar) {}
 
   onSignupSubmit(): void {
     const user = {
@@ -29,6 +30,11 @@ export class SignupComponent {
         const { token, user } = response;
         localStorage.setItem('token', token);
         console.log('Signup successful:', user);
+
+        this.snackBar.open('Signup successful!', 'Close', {
+          duration: 3000,
+        });
+
         this.router.navigate(['/']);
       }, error => {
         console.error('Signup failed:', error.error.error);
