@@ -29,7 +29,7 @@ export class SignupComponent {
         const { token, user } = response;
         localStorage.setItem('token', token);
         console.log('Signup successful:', user);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
       }, error => {
         console.error('Signup failed:', error.error.error);
       });
