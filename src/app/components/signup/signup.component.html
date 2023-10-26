@@ -11,7 +11,6 @@
     <mat-form-field class="form-field">
       <input matInput placeholder="Email" [(ngModel)]="email" name="email" type="email" required>
     </mat-form-field>
-    <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
     <mat-form-field class="form-field">
       <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
     </mat-form-field>
@@ -19,6 +18,8 @@
     <mat-form-field class="form-field">
       <input matInput placeholder="Password" [(ngModel)]="password" name="password" type="password" required>
     </mat-form-field>
+    <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+    <div *ngIf="usernameError" class="error-message">{{ usernameError }}</div>
     <button mat-raised-button style="background-color: darkslategrey;" color="primary" type="submit">Signup</button>
   </form>
 </mat-card>
