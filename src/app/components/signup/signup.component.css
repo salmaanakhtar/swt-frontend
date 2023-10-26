@@ -37,7 +37,3 @@ button{
   border: none;
   cursor: pointer;
 }
-
-.error-message {
-  color: red; /* or any other color you prefer */
-}
