@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Router } from '@angular/router';
 import { MatSnackBar} from '@angular/material/snack-bar';
+import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,7 @@ export class LoginComponent {
   password: string = '';
   loginError: string = '';
 
-  constructor(private apiService: ApiService, private router: Router, private snackBar: MatSnackBar) {}
+  constructor(private apiService: ApiService, private cdr: ChangeDetectorRef private router: Router, private snackBar: MatSnackBar) {}
 
   onLoginSubmit(): void {
     this.apiService.login(this.email, this.password)
@@ -33,6 +34,7 @@ export class LoginComponent {
       }, error => {
         console.error('Login failed:', error.error.error);
         this.loginError = error.error.error;
+        this.cdr.detectChanges();
       });
   }
 }
