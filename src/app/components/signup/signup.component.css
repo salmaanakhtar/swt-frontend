@@ -37,3 +37,12 @@ button{
   border: none;
   cursor: pointer;
 }
+
+.route-text{
+  font-weight: bold;
+  font-family: "Agency FB";
+  font-size: 15px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: grey;
+}
