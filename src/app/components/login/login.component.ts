@@ -10,6 +10,7 @@ import { MatSnackBar} from '@angular/material/snack-bar';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  loginError: string = '';
 
   constructor(private apiService: ApiService, private router: Router, private snackBar: MatSnackBar) {}
 
@@ -31,6 +32,7 @@ export class LoginComponent {
 
       }, error => {
         console.error('Login failed:', error.error.error);
+        this.loginError = error.error.error;
       });
   }
 }

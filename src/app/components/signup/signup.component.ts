@@ -14,6 +14,8 @@ export class SignupComponent {
   email: string = '';
   username: string = '';
   password: string = '';
+  usernameError: string = '';
+  emailError: string = '';
 
   constructor(private apiService: ApiService, private router: Router, private snackBar: MatSnackBar) {}
 
@@ -38,6 +40,11 @@ export class SignupComponent {
         this.router.navigate(['/']);
       }, error => {
         console.error('Signup failed:', error.error.error);
+        if (error.error.error === 'Username already exists') {
+          this.usernameError = 'Username already exists';
+        } else if (error.error.error === 'Email already exists') {
+          this.emailError = 'Email already exists';
+        }
       });
   }
 }
