@@ -13,7 +13,7 @@ export class LoginComponent {
   password: string = '';
   loginError: string = '';
 
-  constructor(private apiService: ApiService, private cdr: ChangeDetectorRef private router: Router, private snackBar: MatSnackBar) {}
+  constructor(private apiService: ApiService, private cdr: ChangeDetectorRef, private router: Router, private snackBar: MatSnackBar) {}
 
   onLoginSubmit(): void {
     this.apiService.login(this.email, this.password)
