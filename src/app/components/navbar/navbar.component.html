@@ -1,0 +1,12 @@
+<div>
+  <mat-toolbar style="background: slategrey;">
+    <mat-toolbar-row>
+      <button mat-icon-button routerLink="/home" routerLinkActive="active-link">
+        <mat-icon [ngStyle]="{'color': isActive('/home') ? 'darkslategrey' : 'black'}">home</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/about" routerLinkActive="active-link">
+        <mat-icon [ngStyle]="{'color': isActive('/about') ? 'darkslategrey' : 'black'}">info</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

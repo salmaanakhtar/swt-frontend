@@ -7,10 +7,10 @@ import { HomeComponent} from "./components/home/home.component";
 import { authGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'home', component: HomeComponent, canActivate: [authGuard]  },
-  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
+  { path: '', component: LoginComponent, data: { showNavbar: false }  },
+  { path: 'signup', component: SignupComponent, data: { showNavbar: false }  },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard], data: { showNavbar: true } },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent, data: { showNavbar: false }  },
 ];
 
 @NgModule({

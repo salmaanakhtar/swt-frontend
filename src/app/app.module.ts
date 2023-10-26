@@ -15,6 +15,9 @@ import {MatButtonModule} from "@angular/material/button";
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     SignupComponent,
     PagenotfoundComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
