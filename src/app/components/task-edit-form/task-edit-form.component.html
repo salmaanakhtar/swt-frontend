@@ -1,0 +1,30 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSave()">
+  <mat-form-field>
+    <input matInput placeholder="Title" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option value="Not Started">Not Started</mat-option>
+      <mat-option value="In Progress">In Progress</mat-option>
+      <mat-option value="Done">Done</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Deadline</mat-label>
+    <input matInput [matDatepicker]="deadlinePicker" formControlName="deadline">
+    <mat-datepicker-toggle matSuffix [for]="deadlinePicker"></mat-datepicker-toggle>
+    <mat-datepicker #deadlinePicker></mat-datepicker>
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button mat-raised-button color="primary" type="submit">Save</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+  </div>
+</form>

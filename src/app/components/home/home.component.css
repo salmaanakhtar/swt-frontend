@@ -1,0 +1,28 @@
+.table-container {
+  padding: 0 20px; /* Adjust the value (20px) to add space on each side */
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px; /* Add rounded corners to the table (adjust the value as needed) */
+  overflow: hidden; /* Hide content that goes beyond the rounded corners */ /* Add a subtle shadow for a more modern look */
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.mat-button{
+  margin-left: 20px;
+}
+
+.status-bullet {
+  width: 10px; /* Set the width of the bullet */
+  height: 10px; /* Set the height of the bullet */
+  border-radius: 50%; /* Make the bullet a circle */
+  display: inline-block; /* Display the bullet as an inline element */
+  margin-right: 10px; /* Add spacing between the bullet and status text */
+}

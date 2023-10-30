@@ -1,0 +1,25 @@
+<div class="task-form">
+  <h2>Create Task</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Title" [(ngModel)]="task.title" name="title" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" [(ngModel)]="task.description" name="description" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="deadlinePicker" placeholder="Deadline" [(ngModel)]="task.deadline" name="deadline" required>
+      <mat-datepicker-toggle matSuffix [for]="deadlinePicker"></mat-datepicker-toggle>
+      <mat-datepicker #deadlinePicker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Status" [(ngModel)]="task.status" name="status" required>
+        <mat-option value="Not Started">Not Started</mat-option>
+        <mat-option value="In Progress">In Progress</mat-option>
+        <mat-option value="Done">Done</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Create</button>
+    <button mat-button color="warn">Cancel</button>
+  </form>
+</div>
