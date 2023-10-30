@@ -38,6 +38,9 @@ export class SignupComponent {
         this.router.navigate(['/']);
       }, error => {
         console.error('Signup failed:', error.error.error);
+        this.snackBar.open('Email or username already in use', 'Close', {
+          duration: 3000,
+        });
       });
   }
 }

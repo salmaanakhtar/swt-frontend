@@ -12,8 +12,12 @@ export class LoginComponent {
   password: string = '';
 
   constructor(private apiService: ApiService, private router: Router, private snackBar: MatSnackBar) {}
+  emailError: string = '';
+  passwordError: string = '';
 
   onLoginSubmit(): void {
+    this.emailError = '';
+    this.passwordError = '';
     this.apiService.login(this.email, this.password)
       .subscribe(response => {
         const { token, user } = response;
@@ -30,7 +34,9 @@ export class LoginComponent {
         this.router.navigate(['/home']);
 
       }, error => {
-        console.error('Login failed:', error.error.error);
+        this.snackBar.open('Invalid email or password', 'Close', {
+          duration: 3000,
+        });
       });
   }
 }
