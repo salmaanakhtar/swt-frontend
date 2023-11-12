@@ -15,11 +15,11 @@ interface Task {
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.css']
 })
-export class HomeComponent{
+export class TaskListComponent {
   displayedColumns: string[] = ['title', 'description', 'deadline', 'status', 'actions'];
   tasks: Task[] = [];
   private userID: string | null = localStorage.getItem('userID');

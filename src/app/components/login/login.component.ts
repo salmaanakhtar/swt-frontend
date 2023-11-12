@@ -31,7 +31,7 @@ export class LoginComponent {
           duration: 3000,
         });
 
-        this.router.navigate(['/home']);
+        this.router.navigate(['/task-list']);
 
       }, error => {
         this.snackBar.open('Invalid email or password', 'Close', {
