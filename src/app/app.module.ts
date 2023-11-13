@@ -25,6 +25,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatNativeDateModule} from "@angular/material/core";
 import { TaskEditFormComponent } from './components/task-edit-form/task-edit-form.component';
+import { HomeComponent } from './components/home/home.component';
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -35,27 +37,29 @@ import { TaskEditFormComponent } from './components/task-edit-form/task-edit-for
     TaskListComponent,
     NavbarComponent,
     TaskFormComponent,
-    TaskEditFormComponent
+    TaskEditFormComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatInputModule,
-    FormsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatTableModule,
-    MatDatepickerModule,
-    MatSelectModule,
-    MatDialogModule,
-    MatNativeDateModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatInputModule,
+        FormsModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatTableModule,
+        MatDatepickerModule,
+        MatSelectModule,
+        MatDialogModule,
+        MatNativeDateModule,
+        ReactiveFormsModule,
+        MatExpansionModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

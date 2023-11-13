@@ -3,7 +3,7 @@
 }
 
 table {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   border-collapse: collapse;
   border-radius: 10px; /* Add rounded corners to the table (adjust the value as needed) */
@@ -16,6 +16,7 @@ th, td {
 }
 
 .mat-button{
+  margin-top: -10px;
   margin-left: 20px;
 }
 
@@ -26,3 +27,14 @@ th, td {
   display: inline-block; /* Display the bullet as an inline element */
   margin-right: 10px; /* Add spacing between the bullet and status text */
 }
+
+.task-subtasks {
+  padding: 10px; /* Adjust the padding for the expanded content */
+  background-color: #f0f0f0; /* Add a background color to differentiate expanded content */
+  border-radius: 5px; /* Add rounded corners to the expanded content */
+}
+
+.subtask-details {
+  margin-bottom: 10px; /* Add spacing between subtasks */
+}
+

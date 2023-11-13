@@ -11,6 +11,15 @@ interface Task {
   status: string;
 }
 
+interface Subtask {
+  subtaskID: number;
+  taskID: number;
+  title: string;
+  description: string;
+  deadline: Date | null;
+  status: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })

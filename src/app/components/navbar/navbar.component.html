@@ -2,7 +2,10 @@
   <mat-toolbar style="background: grey;">
     <mat-toolbar-row>
       <button mat-icon-button routerLink="/home" routerLinkActive="active-link">
-        <mat-icon [ngStyle]="{'color': isActive('/task-list') ? 'darkslategrey' : 'black'}">home</mat-icon>
+        <mat-icon [ngStyle]="{'color': isActive('/home') ? 'darkslategrey' : 'black'}">home</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/task-list" routerLinkActive="active-link">
+        <mat-icon [ngStyle]="{'color': isActive('/task-list') ? 'darkslategrey' : 'black'}">list</mat-icon>
       </button>
     </mat-toolbar-row>
   </mat-toolbar>

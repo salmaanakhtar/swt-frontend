@@ -14,6 +14,16 @@ interface Task {
   status: string;
 }
 
+interface Subtask {
+  subtaskID: number;
+  taskID: number;
+  title: string;
+  description: string;
+  deadline: Date | null;
+  status: string;
+  // Add other fields as needed
+}
+
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
@@ -25,23 +35,24 @@ export class TaskListComponent {
   private userID: string | null = localStorage.getItem('userID');
   private newTask: "" | undefined;
 
-  constructor(private taskService: ApiService, private dialog: MatDialog, private snackBar: MatSnackBar) { }
+  constructor(private taskService: ApiService, private dialog: MatDialog, private snackBar: MatSnackBar) {
+  }
+
 
   ngOnInit(): void {
-    // Fetch userID from local storage
     const userID = localStorage.getItem('userID');
 
-    // Make GET request to retrieve tasks based on userID using the TaskService
     if (userID) {
       this.taskService.getTasksByUserID(parseInt(userID))
         .subscribe(tasks => {
-          this.tasks = tasks;
+          this.tasks = tasks.map(task => ({ ...task}));
         });
     }
   }
+
   openTaskForm(): void {
     const dialogRef = this.dialog.open(TaskFormComponent, {
-      width: '400px', // Set the width of the dialog
+      width: '400px',
     });
 
     dialogRef.afterClosed().subscribe(newTask => {
@@ -49,7 +60,7 @@ export class TaskListComponent {
         if (typeof this.userID === "string") {
           this.taskService.getTasksByUserID(parseInt(this.userID))
             .subscribe(tasks => {
-              this.tasks = tasks;
+              this.tasks = tasks.map(task => ({ ...task, expanded: false, subtasks: [] }));
             });
         }
         console.log('New Task:', newTask);
@@ -81,7 +92,7 @@ export class TaskListComponent {
         if (typeof this.userID === "string") {
           this.taskService.getTasksByUserID(parseInt(this.userID))
             .subscribe(tasks => {
-              this.tasks = tasks;
+              this.tasks = tasks.map(task => ({ ...task, expanded: false, subtasks: [] }));
             });
         }
         console.log('New Task:', this.newTask);
@@ -112,5 +123,4 @@ export class TaskListComponent {
         });
     }
   }
-
 }
