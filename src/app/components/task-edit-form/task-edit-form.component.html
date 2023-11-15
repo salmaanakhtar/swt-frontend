@@ -1,5 +1,6 @@
-<form [formGroup]="taskForm" (ngSubmit)="onSave()">
-  <mat-form-field>
+<div class="task-form-container">
+<form [formGroup]="taskForm" (ngSubmit)="onSave()" class="task-form">
+  <mat-form-field class="mat-form-field">
     <input matInput placeholder="Title" formControlName="title">
   </mat-form-field>
 
@@ -24,7 +25,8 @@
   </mat-form-field>
 
   <div class="form-buttons">
-    <button mat-raised-button color="primary" type="submit">Save</button>
-    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    <button class="button" mat-raised-button color="warn" color="primary" type="submit">Save</button>
+    <button class="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
   </div>
 </form>
+</div>

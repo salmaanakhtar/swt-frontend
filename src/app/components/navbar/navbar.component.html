@@ -7,7 +7,8 @@
       <button mat-icon-button routerLink="/task-list" routerLinkActive="active-link">
         <mat-icon [ngStyle]="{'color': isActive('/task-list') ? '#2F3F4F' : 'black'}">list</mat-icon>
       </button>
-      <button style="margin-left: 1100px" mat-icon-button (click)="logout()" routerLinkActive="active-link">
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="logout()" routerLinkActive="active-link">
         <mat-icon>logout</mat-icon>
       </button>
     </mat-toolbar-row>

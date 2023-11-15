@@ -1,6 +1,6 @@
-<div class="task-form">
-  <h2>Create Task</h2>
-  <form (ngSubmit)="onSubmit()">
+<div class="task-form-container">
+  <h2 class="title">Create Task</h2>
+  <form (ngSubmit)="onSubmit()" class="task-form">
     <mat-form-field>
       <input matInput placeholder="Title" [(ngModel)]="task.title" name="title" required>
     </mat-form-field>

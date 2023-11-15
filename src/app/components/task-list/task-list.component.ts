@@ -52,7 +52,7 @@ export class TaskListComponent {
 
   openTaskForm(): void {
     const dialogRef = this.dialog.open(TaskFormComponent, {
-      width: '400px',
+      width: '300px',
     });
 
     dialogRef.afterClosed().subscribe(newTask => {
@@ -83,7 +83,7 @@ export class TaskListComponent {
 
   openTaskEditForm(taskData: Task): void {
     const dialogRef = this.dialog.open(TaskEditFormComponent, {
-      width: '400px', // Set the width of the dialog
+      width: '300px', // Set the width of the dialog
       data: { task: taskData }
     });
 

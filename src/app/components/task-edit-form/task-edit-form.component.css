@@ -1,0 +1,22 @@
+/* task-form.component.css */
+.task-form-container {
+  height: 70vh; /* Adjust the height as needed */
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Add any additional styling for form fields as needed */
+.mat-form-field {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.button{
+  margin: 5px;
+  margin-bottom: -50px;
+}
